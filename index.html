@@ -5,30 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li style="font-weight:bold;"><a href="#home">Home</a></li>
-                <li  style="font-weight:bold;"><a href="#about">About</a></li>
-                <li  style="font-weight:bold;"><a href="#projects">Projects</a></li>
-                <li  style="font-weight:bold;"><a href="#testimonials">Testimonials</a></li>
-                <li  style="font-weight:bold;"><a href="#contact">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#aboutMe">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-  <!-- Landing Section -->
+       <!-- Landing Section -->
 <section id="home" class="landing-section">
     <div class="profile-container">
-        <img src="C:\Users\HP USER\Downloads\yeh.png" alt="Your Name">
+        <img src="images/yeh.png" alt="Your Name">
     </div>
     <div class="about-me-container">
         <h2>Hello &#x1F44B;, I'm</h2>
         <h1 style="font-size: 250%;">Nzeh Divine Chimdiebere</h1>
-        <p style="font-size: 100; font-weight: bold; color: lightgray;">I am the architect of digital dreams,
+        <p style="font-size: 1rem; font-weight: bold; color: lightgray;">I am the architect of digital dreams,
             a Flutter App Developer crafting innovation,
             an Aspiring Web Developer scripting tomorrow's web, and a UI Designer painting user
             experiences with vibrant hues. Together, I build bridges between imagination and
@@ -36,68 +37,173 @@
     </div>
 </section>
 
-<section id="button" class="button-section">
-    <a href="#aboutMe">
-        <button class="button1">About </button>
-    </a>
-    <a href="file:///C:/Users/HP%20USER/Downloads/Resume%20Nzeh%20Divine%20Chimdiebere%20Chizitere%20Daniel..pdf">
-        <button class="button2">Resume </button>
-    </a>
-</section >
 
-<section id="aboutMe" class="about-me-section">
-<div>
-    <h1 style="color: #6A5ACD; font-size: 200%;">About Me:</h1>
-    <p style="color: white;">Hi, My name is Nzeh Divine Chimdiebere.
-        I am the architect of digital dreams, a Flutter App Developer crafting innovation, 
-        an Aspiring Web Developer scripting tomorrow's web, and a UI Designer painting user
-        experiences with vibrant hues. Together, I build bridges between imagination and
-        reality, turning pixels into meaningful stories that resonate with the world.
-    </p>
-    <p style="color: white; ">
-        <span style="font-size: 160%; color: #6A5ACD;">🚀</span>
-        <span style="font-size: 180%; color: #6A5ACD;">3+</span> years of experience in Flutter app development.
-    
-        Skilled in building captivating mobile apps with Flutter, I excel in API integration and 
-        backend development. From real-time data retrieval to secure data transmission, I ensure
-         seamless app-server communication. With a focus on performance optimization,
-          I create high-performing apps that delight users even on low-bandwidth networks.
-        Passionate about innovation, I'm always up-to-date with the latest trends in mobile app 
-        development. Let's collaborate to bring your app ideas to life with the power of Flutter!
-    </p>
+        <section id="button" class="button-section">
+            <a href="#aboutMe">
+                <button class="button1">About</button>
+            </a>
+            <a href="Resume Nzeh Divine Chimdiebere Chizitere Daniel..pdf" download>
+                <button class="button2">Resume</button>
+            </a>
+        </section>
+        
 
-</div>
-</section>
-
-
-<!-- Portfolio Section -->
-<section id="projects" class="portfolio-section">
-    <h2>Portfolio</h2>
-    <div class="portfoilo-box github-link" data-url="https://github.com/divo662/Tezma">
-        <img src="C:\Users\HP USER\Downloads\TEZMAAD.png" alt="Mobile App Development">
-        <h2>Tezma</h2>
-        <p>🎬 A movie recommendation app.</p>
-    </div>
-    <div class="portfoilo-box github-link" data-url="https://github.com/user/repo2">
-        <img src="C:\Users\HP USER\Downloads\TEZMAAD.png" alt="Web Development">
-        <h2>Web Development</h2>
-        <p>Subtitle 2</p>
-    </div>
-    <!-- Add more portfoilo-box divs for other skills -->
-</section>
-
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="testimonials-section">
-            <h2>Testimonials</h2>
-            <div class="testimonials-container">
-                <!-- Your testimonial cards here -->
+        <section id="aboutMe" class="about-me-section">
+            <div>
+                <h1 style="color: #6A5ACD; font-size: 200%;"> <span>&#x1F468;</span>About Me:</h1>
+                <p style="color: white; font-size: 16px;">
+                    Hi, My name is Nzeh Divine Chimdiebere.
+                    I am the architect of digital dreams, a Flutter App Developer crafting innovation, 
+                    an Aspiring Web Developer scripting tomorrow's web, and a UI Designer painting user
+                    experiences with vibrant hues. Together, I build bridges between imagination and
+                    reality, turning pixels into meaningful stories that resonate with the world.
+                </p>
+                <p style="color: white; font-size: 16px;">
+                    <span style="font-size: 160%; color: #6A5ACD;">🚀</span>
+                    <span style="font-size: 180%; color: #6A5ACD;">3+</span> years of experience in Flutter app development.
+                
+                    Skilled in building captivating mobile apps with Flutter, I excel in API integration and 
+                    backend development. From real-time data retrieval to secure data transmission, I ensure
+                    seamless app-server communication. With a focus on performance optimization,
+                    I create high-performing apps that delight users even on low-bandwidth networks.
+                    Passionate about innovation, I'm always up-to-date with the latest trends in mobile app 
+                    development. Let's collaborate to bring your app ideas to life with the power of Flutter!
+                </p>
             </div>
         </section>
+        
+        
+      <!-- Skills Section -->
+<section id="about" class="skills-section">
+    <div class="skills-box-title">
+        Skills
+        <p>These are the skills I have acquired over the years.</p>
+    </div>
+
+    <!-- Skill Boxes -->
+    <div class="grid-container">
+        <div class="skill-box">
+            <span class="skill-icon">📱</span>
+            <div class="skill-title">Mobile App Development</div>
+        </div>
+
+        <div class="skill-box">
+            <span class="skill-icon">🌐</span>
+            <div class="skill-title">Web Development</div>
+        </div>
+
+        <div class="skill-box">
+            <span class="skill-icon">🎨</span>
+            <div class="skill-title">UI Designs</div>
+        </div>
+
+        <div class="skill-box">
+            <span class="skill-icon">⚙️</span>
+            <div class="skill-title">Backend</div>
+        </div>
+
+        <div class="skill-box">
+            <span class="skill-icon">🎨</span>
+            <div class="skill-title">Graphic Designs</div>
+        </div>
+    </div>
+</section>
+
+
+
+        <!-- Portfolio Section -->
+<section id="projects" class="portfolio-section">
+    <div class="portfoilo-box-title">
+        <span class="skill-icon">📱</span> Projects
+        <p>These are some of my projects</p>
+    </div>
+    <div class="grid-container">
+        <div class="portfoilo-box">
+            <a href="https://github.com/divo662/Tezma" target="_blank" class="github-link">
+                <img src="images/TEZMAAD.png" alt="Tezma">
+            </a>
+            <h2>Tezma</h2>
+            <p>🎬 A movie recommendation app.</p>
+        </div>
+        <div class="portfoilo-box">
+            <a href="https://github.com/divo662/chatdox" target="_blank" class="github-link">
+                <img src="images/chatdox.png" alt="Chatbox">
+            </a>
+            <h2>Chatbox</h2>
+            <p>A social messaging app.</p>
+        </div>
+        <div class="portfoilo-box">
+            <a href="https://github.com/divo662/clothdia" target="_blank" class="github-link">
+                <img src="images/clothy.png" alt="clothdia">
+            </a>
+            <h2>clothdia</h2>
+            <p>A clothing E-commerce app.</p>
+        </div>
+        <div class="portfoilo-box">
+            <a href="https://github.com/divo662/todo" target="_blank" class="github-link">
+                <img src="images/todo.png" alt="todo">
+            </a>
+            <h2>My Todo</h2>
+            <p>A todo app.</p>
+        </div>
+    </div>
+    <div class="portfoilo-box-title">
+        <p><a href="https://github.com/divo662?tab=repositories" target="_blank"><i class="fab fa-github"></i> Check my portfolio now to see more of my projects</a></p>
+    </div>
+</section>
+
+
+        <section class="my-technologies-section">
+            <h2 class="my-technologies-title">My Technologies</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="https://appstimes.in/wp-content/uploads/2015/05/dart_icon.png" alt="Icon 1">
+                    <h3>Dart</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_flutter_icon_130599.png" alt="Icon 2">
+                    <h3>Flutter</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="https://th.bing.com/th/id/R.d12cf916a663b52d01d2e0bbb2e7c18a?rik=te0cP7lVPybmBw&pid=ImgRaw&r=0" alt="Icon 1">
+                    <h3>Firebase</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_python_icon_130221.png" alt="Icon 2">
+                    <h3>Python</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="https://th.bing.com/th/id/R.594d930b20b810cc073400a23bed560c?rik=YaBrv01Dtx62mw&pid=ImgRaw&r=0" alt="Icon 1">
+                    <h3>Kivy</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/javascript-2038874-1720087.png" alt="Icon 2">
+                    <h3>Javascript</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="https://images.vexels.com/media/users/3/166383/isolated/preview/6024bc5746d7436c727825dc4fc23c22-html-programming-language-icon-by-vexels.png" alt="Icon 1">
+                    <h3>HTML</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo.png" alt="Icon 2">
+                    <h3>CSS</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="https://pingvinus.ru/cr_images/modelImage/application/587-logo-Blender.png" alt="Icon 1">
+                    <h3>Blender</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="https://cdn.icon-icons.com/icons2/2429/PNG/512/figma_logo_icon_147289.png" alt="Icon 2">
+                    <h3>Figma</h3>
+                </div>
+                <!-- Add more grid items as needed -->
+            </div>
+        </section>
+        
 
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
-            <h2>Contact Me</h2>
+            <h2>📧 Contact Me</h2>
             <p>If you have any inquiries or would like to collaborate on a project, feel free to reach out to me through the contact form below.</p>
             <form action="#" method="post">
                 <input type="text" name="name" placeholder="Your Name" required>
@@ -109,12 +215,10 @@
     </main>
 
     <footer>
-        <p>Made by Nzeh Divine @2023</p>
+        <p> 🛑 Developed by Code_Dee @2023</p>
     </footer>
 
-    <!-- Add Font Awesome library for icons -->
-<script src="https://kit.fontawesome.com/your-font-awesome-key.js" crossorigin="anonymous"></script>
-<!-- Add the portfolio.js script -->
-<script src="portfolio.js"></script>
+    <!-- Add the portfolio.js script -->
+    <script src="portfolio.js"></script>
 </body>
 </html>
