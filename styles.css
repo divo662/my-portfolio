@@ -25,47 +25,167 @@ header {
   box-shadow: 0 2px 4px rgba(255, 250, 250, 0.1);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+header .menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 header nav ul {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
   margin: 0;
   padding: 0;
 }
 
 header nav ul li {
   margin-right: 1rem;
+  background-color: rgb(3, 3, 32);
 }
 
 header nav ul li a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
+}
+
+/* Navigation menu styles for PC */
+#navMenu {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(3, 3, 32);
+}
+
+#navMenu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(3, 3, 32);
+}
+
+#navMenu ul li {
+  margin-right: 1rem;
+}
+
+#navMenu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+/* Hide the navigation menu by default on mobile screens */
+@media screen and (max-width: 768px) {
+  header .logo {
+    flex-basis: 50%;
+    text-align: left;
+  }
+
+  header .menu-icon {
+    display: block;
+    flex-basis: 50%;
+    text-align: right;
+  }
+
+  header nav {
+    display: none;
+    flex-basis: 100%;
+    text-align: center;
+    background-color: white;
+    padding: 1rem;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    flex-basis: auto;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  header nav ul li:last-child {
+    margin-bottom: 0;
+  }
 }
 
 /* Landing section styles */
 .landing-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(0, 0, 10);
-  padding: 2rem;
-}
-
-.landing-section img {
-  width: 250px;
-  height: 250px;
-}
-
-.about-me-container {
-  max-width: 70%;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  color: white;
-}
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 10);
+    padding: 2rem;
+  }
+  
+  .landing-section img {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .about-me-container {
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: white;
+  }
+  
+  .about-me-container h2 {
+    font-size: 2rem; /* Update the font-size for h2 in the about-me-container */
+  }
+  
+  .about-me-container h1 {
+    font-size: 2.5rem; /* Update the font-size for h1 in the about-me-container */
+  }
+  
+  .about-me-container p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: lightgray;
+  }
+  
+  /* Responsive styles for mobile */
+  @media screen and (max-width: 768px) {
+    .landing-section {
+      flex-direction: column; /* Display the sections in a column on mobile */
+      padding: 1rem; /* Reduce the padding for mobile view */
+    }
+  
+    .landing-section img {
+      margin-bottom: 1rem; /* Add some space between the profile image and the text on mobile */
+    }
+  
+    .about-me-container {
+      max-width: 100%;
+      text-align: center; /* Center align the text on mobile */
+    }
+  
+    .about-me-container h2 {
+      font-size: 1.8rem; /* Update the font-size for h2 in the about-me-container on mobile */
+    }
+  
+    .about-me-container h1 {
+      font-size: 2rem; /* Update the font-size for h1 in the about-me-container on mobile */
+    }
+  
+    .about-me-container p {
+      font-size: 1rem;
+      font-weight: bold;
+      color: lightgray;
+    }
+  }
+  
 /* Button section styles */
 .button-section {
     display: flex;
@@ -145,6 +265,7 @@ header nav ul li a {
     color: #6A5ACD;
     font-size: 24px;
     transition: color 0.3s ease;
+    text-decoration: none;
   }
   
   .social-icons a:hover {
@@ -152,14 +273,15 @@ header nav ul li a {
   }
   
   /* Contact Info */
-.contact-info {
+  .contact-info {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     margin-top: 2rem;
-    border: 2px solid #6A5ACD; /* Add a purple border line */
-    padding: 1rem; /* Add some padding to make it look nicer */
-    border-radius: 10px; /* Add border-radius for rounded corners */
+    border: 2px solid #6A5ACD;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #1a1a1a; /* Add background color to contact info */
   }
   
   .contact-item {
@@ -170,6 +292,16 @@ header nav ul li a {
     font-size: 16px;
   }
   
+  .contact-item a {
+    color: #6A5ACD;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-item a:hover {
+    color: white;
+  }
+  
   /* Responsive styles */
   @media screen and (max-width: 768px) {
     .about-me-section {
@@ -177,33 +309,35 @@ header nav ul li a {
     }
   }
   
-/* Skills section styles */
+  
+/* Skills Section styles */
 .skills-section {
     margin-top: 2rem;
     text-align: center;
-  }
-  
-  .skills-box-title {
+}
+
+.skills-box-title {
     color: #6A5ACD;
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 10px;
-  }
-  
-  .skills-box-title p {
+}
+
+.skills-box-title p {
     color: white;
     font-size: 1rem;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* Skill Boxes Carousel */
+.skills-carousel {
+    display: flex; /* Use Flexbox to create a horizontal row */
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
     gap: 20px;
-    justify-items: center;
-  }
-  
-  .skill-box {
-    width: 150px; /* Set a fixed width for all skill boxes */
+    justify-content: center;
+}
+
+.skill-box {
+    min-width: 150px; /* Set a minimum width for all skill boxes */
     height: 150px; /* Set a fixed height for all skill boxes */
     display: flex;
     flex-direction: column;
@@ -213,193 +347,217 @@ header nav ul li a {
     transition: background-color 0.3s ease;
     background-color: #585252;
     border-radius: 10px;
-  }
-  
-  .skill-icon {
+}
+
+.skill-icon {
     font-size: 40px;
     color: #6A5ACD;
     margin-bottom: 10px;
-  }
-  
-  .skill-title {
+}
+
+.skill-title {
     font-size: 16px;
     font-weight: bold;
     color: white;
-  }
-  
-  /* Hover style */
-  .skill-box:hover {
+}
+
+/* Hover style */
+.skill-box:hover {
     background-color: #6A5ACD;
     color: white;
-  }
-  
+}
 
+
+
+.portfolio-section {
+  padding: 2rem 0;
+}
+
+.portfoilo-box-title {
+  color: #6A5ACD;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  text-align: left; /* Align title to the left */
+}
+
+.portfoilo-box-title-description {
+  color: white;
+  font-size: 1rem;
+  text-align: left; /* Align description to the left */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.portfoilo-box {
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 20px;
+  background-color: #585252;
+  border-radius: 10px;
+}
+
+.portfoilo-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.portfoilo-box h2 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.portfoilo-box p {
+  color: white;
+  font-size: 1rem;
+}
+
+/* Hover effect */
+.portfoilo-box:hover {
+  background-color: #6A5ACD;
+  color: white;
+}
+
+/* Adjust portfolio box layout on smaller screens */
+@media screen and (max-width: 768px) {
   .portfolio-section {
-    padding: 2rem 0;
+    grid-template-columns: repeat(1, 1fr);
   }
-  
-  .portfoilo-box-title {
-    color: #6A5ACD;
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin-top: 10px;
-    text-align: left; /* Align title to the left */
-  }
-  
-  .portfoilo-box-title-description {
-    color: white;
-    font-size: 1rem;
-    text-align: left; /* Align description to the left */
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    justify-items: center;
-  }
-  
-  .portfoilo-box {
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    padding: 20px;
-    background-color: #585252;
-    border-radius: 10px;
-  }
-  
-  .portfoilo-box img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .portfoilo-box h2 {
-    color: white;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .portfoilo-box p {
-    color: white;
-    font-size: 1rem;
-  }
-  
-  /* Hover effect */
-  .portfoilo-box:hover {
-    background-color: #6A5ACD;
-    color: white;
-  }
-  
-  /* Adjust portfolio box layout on smaller screens */
-  @media screen and (max-width: 768px) {
-    .portfolio-section {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-  
+}
 
-/* My Technologies Section */
+
+/* My Technologies Section styles */
 .my-technologies-section {
     text-align: center;
     margin-bottom: 30px;
-  }
-  
-  .my-technologies-title {
+}
+
+.my-technologies-title {
     color: #6A5ACD;
-  }
-  
-  .my-technologies-section .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Display three grid items per row */
+}
+
+/* Technologies Carousel */
+.technologies-carousel {
+    display: flex; /* Use Flexbox to create a horizontal row */
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
     gap: 20px;
-  }
-  
-  .my-technologies-section .grid-item {
+}
+
+.my-technologies-section .grid-item {
     text-align: center;
     background-color: #585252;
     padding: 20px;
     border-radius: 10px;
     transition: background-color 0.3s ease;
-  }
-  
-  .my-technologies-section .grid-item img {
+}
+
+.my-technologies-section .grid-item img {
     width: 80px;
     height: 80px;
     display: block;
     margin: 0 auto;
-  }
-  
-  .my-technologies-section .grid-item h3 {
+}
+
+.my-technologies-section .grid-item h3 {
     margin-top: 10px;
     color: #333;
-  }
-  
-  .my-technologies-section .grid-item:hover {
+}
+
+.my-technologies-section .grid-item:hover {
     background-color: #6A5ACD;
     color: white;
-  }
-  
+}
+
 
 /* Contact Section */
 .contact-section {
-  display: grid;
-  gap: 1rem;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 40px;
-  background-color: #6A5ACD;
-  color: white;
-  text-align: center;
-}
-
-.contact-section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.contact-section p {
-  font-size: 16px;
-  margin-bottom: 30px;
-  color: white;
-}
-
-form {
-  display: grid;
-  gap: 1rem;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #6A5ACD;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #4b3f9d;
-}
+    display: grid;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #6A5ACD;
+    color: white;
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .contact-section p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: white;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column; /* Change to flexbox and column direction */
+    align-items: center; /* Center the form contents horizontally */
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6A5ACD;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #4b3f9d;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .contact-section {
+      max-width: 100%;
+      padding: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .contact-section h2 {
+      font-size: 24px;
+      color: white;
+    }
+  
+    .contact-section p {
+      font-size: 14px;
+      color: white;
+    }
+  }
+  
 
 /* Footer styles */
 footer {
