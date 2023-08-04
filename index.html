@@ -10,32 +10,35 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutMe">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <div class="logo">Code_Dee</div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav id="navMenu">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutMe">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </nav>
-    </header>
-
+      </header>
+      
     <main>
-       <!-- Landing Section -->
+<!-- Landing Section -->
 <section id="home" class="landing-section">
     <div class="profile-container">
-        <img src="images/yeh.png" alt="Your Name">
+        <img src="images/memoji.png" alt="Your Name">
     </div>
     <div class="about-me-container">
         <h2>Hello &#x1F44B;, I'm</h2>
-        <h1 style="font-size: 250%;">Nzeh Divine Chimdiebere</h1>
-        <p style="font-size: 1rem; font-weight: bold; color: lightgray;">I am the architect of digital dreams,
+        <h1>Nzeh Divine Chimdiebere</h1>
+        <p>I am the architect of digital dreams,
             a Flutter App Developer crafting innovation,
             an Aspiring Web Developer scripting tomorrow's web, and a UI Designer painting user
             experiences with vibrant hues. Together, I build bridges between imagination and
             reality, turning pixels into meaningful stories that resonate with the world.</p>
     </div>
 </section>
+
 
 
         <section id="button" class="button-section">
@@ -99,7 +102,7 @@
           
         
         
-      <!-- Skills Section -->
+<!-- Skills Section -->
 <section id="about" class="skills-section">
     <div class="skills-box-title">
         Skills
@@ -107,7 +110,7 @@
     </div>
 
     <!-- Skill Boxes -->
-    <div class="grid-container">
+    <div class="skills-carousel">
         <div class="skill-box">
             <span class="skill-icon">📱</span>
             <div class="skill-title">Mobile App Development</div>
@@ -134,7 +137,6 @@
         </div>
     </div>
 </section>
-
 
 
         <!-- Portfolio Section -->
@@ -173,71 +175,72 @@
             <p>A todo app.</p>
         </div>
     </div>
-    <div class="portfoilo-box-title">
+    <div class="portfoilo-box-title-description">
         <p><a href="https://github.com/divo662?tab=repositories" target="_blank"><i class="fab fa-github"></i> Check my portfolio now to see more of my projects</a></p>
     </div>
 </section>
 
 
-        <section class="my-technologies-section">
-            <h2 class="my-technologies-title">My Technologies</h2>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <img src="https://appstimes.in/wp-content/uploads/2015/05/dart_icon.png" alt="Icon 1">
-                    <h3>Dart</h3>
-                </div>
-                <div class="grid-item">
-                    <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_flutter_icon_130599.png" alt="Icon 2">
-                    <h3>Flutter</h3>
-                </div>
-                <div class="grid-item">
-                    <img src="https://th.bing.com/th/id/R.d12cf916a663b52d01d2e0bbb2e7c18a?rik=te0cP7lVPybmBw&pid=ImgRaw&r=0" alt="Icon 1">
-                    <h3>Firebase</h3>
-                </div>
-                <div class="grid-item">
-                    <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_python_icon_130221.png" alt="Icon 2">
-                    <h3>Python</h3>
-                </div>
-                <div class="grid-item">
-                    <img src="https://th.bing.com/th/id/R.594d930b20b810cc073400a23bed560c?rik=YaBrv01Dtx62mw&pid=ImgRaw&r=0" alt="Icon 1">
-                    <h3>Kivy</h3>
-                </div>
-                <div class="grid-item">
-                    <img src="https://cdn.iconscout.com/icon/free/png-512/javascript-2038874-1720087.png" alt="Icon 2">
-                    <h3>Javascript</h3>
-                </div>
-                <div class="grid-item">
-                    <img src="https://images.vexels.com/media/users/3/166383/isolated/preview/6024bc5746d7436c727825dc4fc23c22-html-programming-language-icon-by-vexels.png" alt="Icon 1">
-                    <h3>HTML</h3>
-                </div>
-                <div class="grid-item">
-                    <img src="https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo.png" alt="Icon 2">
-                    <h3>CSS</h3>
-                </div>
-                <div class="grid-item">
-                    <img src="https://pingvinus.ru/cr_images/modelImage/application/587-logo-Blender.png" alt="Icon 1">
-                    <h3>Blender</h3>
-                </div>
-                <div class="grid-item">
-                    <img src="https://cdn.icon-icons.com/icons2/2429/PNG/512/figma_logo_icon_147289.png" alt="Icon 2">
-                    <h3>Figma</h3>
-                </div>
-                <!-- Add more grid items as needed -->
-            </div>
-        </section>
-        
+        <!-- My Technologies Section -->
+<section class="my-technologies-section">
+    <h2 class="my-technologies-title">My Technologies</h2>
+    <div class="technologies-carousel">
+        <div class="grid-item">
+            <img src="https://appstimes.in/wp-content/uploads/2015/05/dart_icon.png" alt="Icon 1">
+            <h3>Dart</h3>
+        </div>
+        <div class="grid-item">
+            <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_flutter_icon_130599.png" alt="Icon 2">
+            <h3>Flutter</h3>
+        </div>
+        <div class="grid-item">
+            <img src="https://th.bing.com/th/id/R.d12cf916a663b52d01d2e0bbb2e7c18a?rik=te0cP7lVPybmBw&pid=ImgRaw&r=0" alt="Icon 1">
+            <h3>Firebase</h3>
+        </div>
+        <div class="grid-item">
+            <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_python_icon_130221.png" alt="Icon 2">
+            <h3>Python</h3>
+        </div>
+        <div class="grid-item">
+            <img src="https://th.bing.com/th/id/R.594d930b20b810cc073400a23bed560c?rik=YaBrv01Dtx62mw&pid=ImgRaw&r=0" alt="Icon 1">
+            <h3>Kivy</h3>
+        </div>
+        <div class="grid-item">
+            <img src="https://cdn.iconscout.com/icon/free/png-512/javascript-2038874-1720087.png" alt="Icon 2">
+            <h3>Javascript</h3>
+        </div>
+        <div class="grid-item">
+            <img src="https://images.vexels.com/media/users/3/166383/isolated/preview/6024bc5746d7436c727825dc4fc23c22-html-programming-language-icon-by-vexels.png" alt="Icon 1">
+            <h3>HTML</h3>
+        </div>
+        <div class="grid-item">
+            <img src="https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo.png" alt="Icon 2">
+            <h3>CSS</h3>
+        </div>
+        <div class="grid-item">
+            <img src="https://pingvinus.ru/cr_images/modelImage/application/587-logo-Blender.png" alt="Icon 1">
+            <h3>Blender</h3>
+        </div>
+        <div class="grid-item">
+            <img src="https://cdn.icon-icons.com/icons2/2429/PNG/512/figma_logo_icon_147289.png" alt="Icon 2">
+            <h3>Figma</h3>
+        </div>
+        <!-- Add more grid items as needed -->
+    </div>
+</section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <h2>📧 Contact Me</h2>
-            <p>If you have any inquiries or would like to collaborate on a project, feel free to reach out to me through the contact form below.</p>
-            <form action="#" method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+
+       <!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <h2>📧 Contact Me</h2>
+    <p>If you have any inquiries or would like to collaborate on a project, feel free to reach out to me through the contact form below.</p>
+    <form id="contactForm" action="#" method="post">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>  
     </main>
 
     <footer>
@@ -246,5 +249,71 @@
 
     <!-- Add the portfolio.js script -->
     <script src="portfolio.js"></script>
+    <script>
+        function toggleMenu() {
+          var navMenu = document.getElementById("navMenu");
+          if (navMenu.style.display === "block") {
+            navMenu.style.display = "none";
+          } else {
+            navMenu.style.display = "block";
+          }
+        }
+        </script>
+    
+    <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-database.js"></script>
+<!-- Add other Firebase modules if needed (e.g., firebase-auth, firebase-firestore) -->
+
+
+<script>
+
+    // Import the required functions from the SDKs
+import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
+
+   const firebaseConfig = {
+    apiKey: "AIzaSyC12x61xTSLeCeUCDsSJ28U0e2Dzo5q7n8",
+    authDomain: "my-portfolio-3c777.firebaseapp.com",
+    projectId: "my-portfolio-3c777",
+    storageBucket: "my-portfolio-3c777.appspot.com",
+    messagingSenderId: "506361964081",
+    appId: "1:506361964081:web:1073bce964686aeb961710"
+  };
+    firebase.initializeApp(firebaseConfig);
+
+    
+  </script>
+
+<script>
+    const contactForm = document.getElementById("contactForm");
+    const dbRef = firebase.firestore().collection("contact_messages"); // Reference to your Firebase Firestore
+  
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault(); // Prevent form submission
+  
+      // Get form values
+      const name = contactForm.querySelector("#name").value;
+      const email = contactForm.querySelector("#email").value;
+      const message = contactForm.querySelector("#message").value;
+  
+      // Store form data in Firebase Firestore
+      dbRef.add({
+        name: name,
+        email: email,
+        message: message,
+      })
+      .then(() => {
+        // Data stored successfully
+        alert("Thank you for your message!");
+        contactForm.reset(); // Clear form fields
+      })
+      .catch((error) => {
+        // Error occurred while storing data
+        console.error("Error storing data:", error);
+      });
+    });
+  </script>
+ 
 </body>
 </html>
