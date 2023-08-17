@@ -328,11 +328,14 @@ header nav ul li a {
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 10px;
+    margin-right: 30px;
+    text-align: left;
 }
 
 .skills-box-title p {
     color: white;
     font-size: 1rem;
+    text-align: left;
 }
 
 /* Skill Boxes Carousel */
@@ -391,6 +394,7 @@ header nav ul li a {
 .portfoilo-box-title-description {
   color: white;
   font-size: 1rem;
+  
   text-align: left; /* Align description to the left */
 }
 
@@ -415,7 +419,7 @@ header nav ul li a {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .portfoilo-box h2 {
@@ -451,6 +455,7 @@ header nav ul li a {
 
 .my-technologies-title {
     color: #6A5ACD;
+    text-align: left;
 }
 
 /* Technologies Carousel */
@@ -502,10 +507,12 @@ header nav ul li a {
     font-size: 28px;
     margin-bottom: 20px;
     color: white;
+    text-align: left;
   }
   
   .contact-section p {
     font-size: 16px;
+    text-align: left;
     margin-bottom: 30px;
     color: white;
   }
