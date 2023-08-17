@@ -9,18 +9,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Code_Dee</div>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-        <nav id="navMenu">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#aboutMe">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
+  <header>
+    <div class="logo">Code_Dee</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav id="navMenu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#aboutMe">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
       
     <main>
 <!-- Landing Section -->
@@ -85,16 +85,16 @@
               </div>
               <div class="contact-info">
                 <div class="contact-item">
-                  <i class="material-icons">Location:</i>
-                  <p>Kaduna South, Kaduna State, Nigeria</p>
+                  <i class="contact-header">Location:</i>
+                  <p class="contact-header-item">Lagos State, Nigeria</p>
                 </div>
                 <div class="contact-item">
-                  <i class="material-icons">Phone:</i>
-                  <p>08118410480</p>
+                  <i class="contact-header">Phone:</i>
+                  <p class="contact-header-item">+234 811 841 0480</p>
                 </div>
                 <div class="contact-item">
-                  <i class="material-icons">Email:</i>
-                  <p>divzeh001@gmail.com</p>
+                  <i class="contact-header">Email:</i>
+                  <p class="contact-header-item">divzeh001@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -143,7 +143,7 @@
 <section id="projects" class="portfolio-section">
     <div class="portfoilo-box-title">
         <span class="skill-icon">📱</span> Projects
-        <p>These are some of my projects</p>
+        <p class="portfoilo-box-title-description">These are some of my projects</p>
     </div>
     <div class="grid-container">
         <div class="portfoilo-box">
@@ -175,11 +175,12 @@
             <p>A todo app.</p>
         </div>
     </div>
-    <div class="portfoilo-box-title-description">
-        <p><a href="https://github.com/divo662?tab=repositories" target="_blank"><i class="fab fa-github"></i> Check my portfolio now to see more of my projects</a></p>
+    <div>
+      <a href="https://github.com/divo662?tab=repositories" target="_blank">
+        <button class="button1">My Portfolio</button>
+    </a>
     </div>
 </section>
-
 
         <!-- My Technologies Section -->
 <section class="my-technologies-section">
@@ -259,61 +260,81 @@
           }
         }
         </script>
-    
-    <!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-database.js"></script>
-<!-- Add other Firebase modules if needed (e.g., firebase-auth, firebase-firestore) -->
-
 
 <script>
+  function toggleMenu() {
+    var nav = document.getElementById("navMenu");
+    if (nav.style.display === "block") {
+      nav.style.display = "none";
+    } else {
+      nav.style.display = "block";
+    }
+  }
 
-    // Import the required functions from the SDKs
-import { initializeApp } from "firebase/app";
-import { getDatabase } from "firebase/database";
+  // Display the header list on larger screens
+  window.addEventListener("resize", function() {
+    var nav = document.getElementById("navMenu");
+    if (window.innerWidth > 768) {
+      nav.style.display = "flex";
+    } else {
+      nav.style.display = "none";
+    }
+  });
 
-   const firebaseConfig = {
-    apiKey: "AIzaSyC12x61xTSLeCeUCDsSJ28U0e2Dzo5q7n8",
+  // Initial state for the mobile menu
+  toggleMenu();
+</script>
+
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore-compat.js"></script>
+
+<script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyC12x61xTSLeCeUCDsSJ28U0e2Dzo5q7n8",
     authDomain: "my-portfolio-3c777.firebaseapp.com",
     projectId: "my-portfolio-3c777",
     storageBucket: "my-portfolio-3c777.appspot.com",
     messagingSenderId: "506361964081",
     appId: "1:506361964081:web:1073bce964686aeb961710"
-  };
+    };
+
+    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore(); // Initialize Firestore
 
-    
-  </script>
+    // Get a reference to the contact_messages collection
+    const dbRef = db.collection("contact_messages");
 
-<script>
+    // Add event listener to the contact form
     const contactForm = document.getElementById("contactForm");
-    const dbRef = firebase.firestore().collection("contact_messages"); // Reference to your Firebase Firestore
-  
     contactForm.addEventListener("submit", (e) => {
-      e.preventDefault(); // Prevent form submission
-  
-      // Get form values
-      const name = contactForm.querySelector("#name").value;
-      const email = contactForm.querySelector("#email").value;
-      const message = contactForm.querySelector("#message").value;
-  
-      // Store form data in Firebase Firestore
-      dbRef.add({
-        name: name,
-        email: email,
-        message: message,
-      })
-      .then(() => {
-        // Data stored successfully
-        alert("Thank you for your message!");
-        contactForm.reset(); // Clear form fields
-      })
-      .catch((error) => {
-        // Error occurred while storing data
-        console.error("Error storing data:", error);
-      });
+        e.preventDefault(); // Prevent form submission
+
+        // Get form values
+        const name = contactForm.querySelector("#name").value;
+        const email = contactForm.querySelector("#email").value;
+        const message = contactForm.querySelector("#message").value;
+
+        // Store form data in Firebase Firestore
+        dbRef.add({
+            name: name,
+            email: email,
+            message: message,
+        })
+        .then(() => {
+            // Data stored successfully
+            alert("Thank you for your message!");
+            contactForm.reset(); // Clear form fields
+        })
+        .catch((error) => {
+            // Error occurred while storing data
+            console.error("Error storing data:", error);
+        });
     });
-  </script>
+</script>
+
  
 </body>
 </html>
